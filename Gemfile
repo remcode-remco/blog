@@ -74,5 +74,3 @@ end
 
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
-gem 'sass-rails'
-gem "font-awesome-sass", "~> 6.5.1"
