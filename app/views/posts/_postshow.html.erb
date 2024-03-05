@@ -1,0 +1,20 @@
+<div id="<%= dom_id post %>" class='border-4 shadow-lg m-2 rounded-lg'>
+  <div class='relative'>
+    <div class='h-[50vh]'>
+      <% if post.images.any? %>
+        <%= image_tag post.images.first.url, class: "rounded-t-lg" %>
+      <% end %>
+    </div>
+    <div class="block absolute bottom-0 left-0 right-0 w-full h-full mb-2 hover:mb-10 flex items-end justify-center transition-all duration-300">
+      <h2 class='text-decoration-none text-center font-bold text-white text-2xl'>
+        <%= post.title %>
+      </h2>
+    </div>
+  </div>
+
+  <p class="px-3 text-xl">
+    <%= post.content %>
+  </p>
+  
+  <%# if action_name != "show" %>
+</div>

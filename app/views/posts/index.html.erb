@@ -1,0 +1,11 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div id="posts" class="grid md:grid-cols-4">
+    <% @posts.each do |post| %>
+        <%= render partial: 'postindex', locals: { post: post } %>
+    <% end %>
+  </div>
+</div>

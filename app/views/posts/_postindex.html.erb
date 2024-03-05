@@ -1,0 +1,14 @@
+<div id="<%= dom_id post %>" class='border shadow-lg shadow-black hover:shadow-gray-800 m-2 rounded-lg transition-all duration-500'>
+  <div class='relative'>
+    <% if post.images.any? %>
+      <%= image_tag post.images.first.url, class: "rounded-lg" %>
+    <% end %>
+    <%= link_to post_path(post), class: '' do %>
+      <div class="block absolute bottom-0 left-0 right-0 w-full h-full mb-2 hover:mb-10 flex items-end justify-center transition-all duration-300">
+        <h2 class='text-decoration-none text-center font-bold text-white text-2xl'>
+          <%= post.title %>
+        </h2>
+      </div>
+    <% end %>
+  </div>
+</div>
